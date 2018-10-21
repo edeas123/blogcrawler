@@ -45,7 +45,7 @@ jobs:
 
 workflows:
   version: 2
-  built_test:
+  build_test:
     jobs:
       - flake8_test
       - mypy_test
