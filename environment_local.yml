@@ -4,5 +4,5 @@ DEBUG: true
 TESTING: false
 ENV: 'local'
 
-MESSAGE_BROKER_HOST: 'amqp://localhost:5672e'
-REDIS_URL: 'redis://localhost:6379e/0'
+MESSAGE_BROKER_HOST: 'amqp://localhost:5672'
+REDIS_URL: 'redis://localhost:6379/0'
