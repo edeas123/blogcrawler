@@ -1,1 +1,1 @@
-from blogcrawler.celery.tasks.add import addition
+from blogcrawler.celery.tasks.celery import addition

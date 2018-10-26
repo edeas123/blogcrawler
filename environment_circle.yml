@@ -1,0 +1,8 @@
+API_PATH: 'api/v1'
+
+DEBUG: true
+TESTING: false
+ENV: 'circle'
+
+MESSAGE_BROKER_HOST: 'amqp://localhost:5672'
+REDIS_URL: 'redis://localhost:6379/0'
