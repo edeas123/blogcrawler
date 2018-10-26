@@ -49,8 +49,6 @@ jobs:
       - image: python:3.6.6
       - image: rabbitmq:3.7.8
       - image: redis:5.0.0
-        environment:
-          APP_ENVIRONMENT: circle
     working_directory: ~/project
     steps:
       - checkout
@@ -61,7 +59,10 @@ jobs:
           command: pip install tox==2.9.1
       - run:
           name: Integration
-          command: tox -e integration
+          command: |
+            echo 'export APP_ENVIRONMENT=circle' >> $BASH_ENV
+            source $BASH_ENV
+            tox -e integration
 
 workflows:
   version: 2
