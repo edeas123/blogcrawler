@@ -31,6 +31,8 @@ jobs:
   unit_test:
     docker:
       - image: python:3.6.6
+        environment:
+          APP_ENVIRONMENT: 'circle'
     working_directory: ~/project
     steps:
       - checkout
