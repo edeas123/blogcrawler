@@ -32,7 +32,7 @@ jobs:
     docker:
       - image: python:3.6.6
         environment:
-          APP_ENVIRONMENT: 'circle'
+          APP_ENVIRONMENT: circle
     working_directory: ~/project
     steps:
       - checkout
@@ -50,7 +50,7 @@ jobs:
       - image: rabbitmq:3.7.8
       - image: redis:5.0.0
         environment:
-          APP_ENVIRONMENT: 'circle'
+          APP_ENVIRONMENT: circle
     working_directory: ~/project
     steps:
       - checkout
@@ -70,5 +70,4 @@ workflows:
       - flake8_test
       - mypy_test
       - unit_test
-      - integration_test:
-          context: edeas123
+      - integration_test

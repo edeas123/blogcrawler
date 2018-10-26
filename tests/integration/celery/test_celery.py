@@ -8,5 +8,5 @@ class TestCeleryTask(unittest.TestCase):
 
         self.assertEqual(addition(3, 5), 8)
         self.task = addition.apply_async(args=[3, 5])
-        self.results = self.task.get(timeout=5)
+        self.results = self.task.get(timeout=30)
         self.assertEqual(self.task.state, 'SUCCESS')
