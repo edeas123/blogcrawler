@@ -63,7 +63,7 @@ jobs:
             pip install -r requirements.txt
       - run:
           name: Run Celery
-          command: python blogcrawler/celery/app.py
+          command: celery worker --detach -A blogcrawler.celery.app.app
       - run:
           name: Integration
           environment:
