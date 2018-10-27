@@ -58,6 +58,13 @@ jobs:
           name: Install Tox
           command: pip install tox==2.9.1
       - run:
+          name: Install Dependencies
+          command: |
+            tox -vv -e integration --notest
+      - run:
+          name: Run Celery
+          command: python blogcrawler/celery/app.py
+      - run:
           name: Integration
           environment:
             APP_ENVIRONMENT: circle
