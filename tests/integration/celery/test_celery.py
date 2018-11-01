@@ -1,8 +1,8 @@
-import unittest
+from tests.integration.celery.core import CeleryTestCase
 from blogcrawler.celery.tasks import addition
 
 
-class TestCeleryTask(unittest.TestCase):
+class TestCeleryTask(CeleryTestCase):
 
     def test_addition(self):
 
