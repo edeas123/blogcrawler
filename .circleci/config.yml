@@ -58,13 +58,6 @@ jobs:
           name: Install Tox
           command: pip install tox==2.9.1
       - run:
-          name: Install Requirements
-          command: |
-            pip install -r requirements.txt
-      - run:
-          name: Run Celery
-          command: celery worker --detach -A blogcrawler.celery.app.app
-      - run:
           name: Integration
           environment:
             APP_ENVIRONMENT: circle
